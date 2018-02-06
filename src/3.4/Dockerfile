@@ -30,5 +30,7 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 EXPOSE 7474 7473 7687
 
+RUN chmod -R 777 /var/lib/neo4j
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["neo4j"]
